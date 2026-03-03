@@ -8,7 +8,7 @@ const firebaseConfig={
   projectId:"yokexcreation-5423b",
   storageBucket:"yokexcreation-5423b.firebasestorage.app",
   messagingSenderId:"1034963838634",
-  appId:"1:1034963838634:web:c528700e97cd69"
+  appId:"1:1034963838634:web:c528700e97cd69094e92d3"
 };
 
 const firebaseApp=initializeApp(firebaseConfig);
