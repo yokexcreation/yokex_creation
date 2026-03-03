@@ -70,7 +70,11 @@ fd.append("upload_preset",UPLOAD_PRESET);
 fd.append("folder","yokex-creation");
 const res=await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,{method:"POST",body:fd});
 const data=await res.json();
-return{url:data.secure_url,thumb:data.secure_url.replace("/upload/","/upload/w_400,c_fill/"),label:file.name.replace(/\.[^/.]+$,"")};
+return {
+  url: data.secure_url,
+  thumb: data.secure_url.replace("/upload/", "/upload/w_400,c_fill/"),
+  label: file.name.substring(0, file.name.lastIndexOf(".")) || file.name
+};
 };
 
 const upload=async(e)=>{
